@@ -1,15 +1,13 @@
-Function criartabela(nome)
+function criartabela(nome)  
 {
     const tabela = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
 
-
     const tr_nome = document.createElement("tr");
-    const tr_nome = document.createElement("td");
-    td_nome.innerhtml = nome;
-    td_nome.colspan = 5;
-
+    const td_nome = document.createElement("td");
+    td_nome.innerHTML = nome;
+    td_nome.colSpan = 5;
 
     const th_B = document.createElement("th");
     th_B.innerHTML = "B";
@@ -23,23 +21,21 @@ Function criartabela(nome)
     th_O.innerHTML = "O";
 
     tr_nome.appendChild(td_nome);
-    tr_head.appendChild(tr_nome);
-    tr_head.appendChild(tr_B);
-    tr_head.appendChild(tr_I);
-    tr_head.appendChild(tr_N);
-    tr_head.appendChild(tr_G);
-    tr_head.appendChild(tr_O);
+    thead.appendChild(tr_nome);
+    thead.appendChild(th_B);
+    thead.appendChild(th_I);
+    thead.appendChild(th_N);
+    thead.appendChild(th_G);
+    thead.appendChild(th_O);
 
-    for (let i = 0; i < 5; i++);
-    {
-        const tr = document.createElement("tr")
-        for (let i = 0; i < 5; i++) 
-        {
-            const td = Document.createElement("td");
+    for (let i = 0; i < 5; i++) {
+        const tr = document.createElement("tr");
+        for (let j = 0; j < 5; j++) {
+            const td = document.createElement("td");
             td.innerHTML = "xx";
-            tr.appendChild(td)
+            tr.appendChild(td);
         }
-        tbody.appendChild(tr)
+        tbody.appendChild(tr);
     }
 
     tabela.appendChild(thead);
@@ -51,13 +47,16 @@ Function criartabela(nome)
 
 function pedirnomeecriartabela()
 {
-    const nome = prompt("digite o seu nome: ");
+    const nome = prompt("Digite o seu nome: ");
 
-    if(nome?.length < 5)
+    if (nome?.length < 5) 
     {
         alert("Digite um nome com mais de 5 letras!");
         return;
     }
 
-    criartabela(nome)
+    criartabela(nome);
 }
+
+pedirnomeecriartabela();
+

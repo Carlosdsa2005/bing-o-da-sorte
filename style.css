@@ -1,7 +1,12 @@
 h1{
 text-align: center;
 }
-
-button{
-   justify-content: center;
+header{
+   align-items: center;
 }
+
+
+table {
+   table-layout: auto;
+   width: 180px;
+ }
