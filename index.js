@@ -28,12 +28,31 @@ function criartabela(nome)
     thead.appendChild(th_G);
     thead.appendChild(th_O);
 
+  const num = [];
+   for (let i = 1; i <= 75; i++)
+   {
+    num.push(i);
+   }
+   console.log(num);
+
     for (let i = 0; i < 5; i++) {
+       
         const tr = document.createElement("tr");
         for (let j = 0; j < 5; j++) {
-            const td = document.createElement("td");
-            td.innerHTML = "xx";
-            tr.appendChild(td);
+            
+            if(i == 2 && j == 2 )
+            {
+                const td = document.createElement("td")
+                td.innerHTML = "x";
+                tr.appendChild(td);
+            }
+            else{
+                const td = document.createElement("td");
+                td.innerHTML = numeroaleatorios(num);
+                tr.appendChild(td);
+            }
+            
+            
         }
         tbody.appendChild(tr);
     }
@@ -58,5 +77,9 @@ function pedirnomeecriartabela()
     criartabela(nome);
 }
 
-pedirnomeecriartabela();
+function numeroaleatorios(num)
+{   
 
+   var lll = num.sort();
+   return lll;
+}

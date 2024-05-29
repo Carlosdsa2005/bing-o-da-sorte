@@ -1,12 +1,12 @@
-h1{
-text-align: center;
-}
-header{
+.inicio{
    align-items: center;
 }
+
+
 
 
 table {
    table-layout: auto;
    width: 180px;
+   
  }
